@@ -348,7 +348,7 @@ function onEachFeature(feature, layer) {
       <strong>Data:</strong> ${featureData.data}<br>
       <strong>Unique Labels:</strong> ${featureData.unique_labels.join(', ')}<br>
       <strong>Content:</strong> ${featureData.id_content}<br>
-        <strong>Source:</strong> ${featureData.urls}<br>
+        <strong>Source:</strong><a href="${featureData.urls}" target="_blank"> ${featureData.urls}</a><br>
         <strong>File:</strong> ${featureData.file_name}<br>
         <strong>Info:</strong> ${featureData.first_page_content}
     `;
