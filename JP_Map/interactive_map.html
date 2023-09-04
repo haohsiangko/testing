@@ -31,6 +31,10 @@
 
 <div id="container">
     <div id="controls">
+        <h3>Select All</h3>
+<input type="checkbox" id="selectAll" checked> Select/Deselect All<br>
+
+
         <!-- Your checkboxes will go here -->
         <h3>Filter by Version</h3>
         <input type="checkbox" id="old" checked> Old<br>
@@ -369,6 +373,13 @@ function getFeatureStyle(feature) {
   }
 }
 
+document.getElementById("selectAll").addEventListener("click", function() {
+    const checkboxes = document.querySelectorAll("#controls input[type='checkbox']");
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = this.checked;
+    });
+    updateMap(); // 重新更新地圖
+});
 
 
 
